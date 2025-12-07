@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[AddComponentMenu("ARCourse/ObjectSpawners")]
 
-public class NewBehaviourScript : MonoBehaviour
+public class ObjectSpawners : MonoBehaviour
 {
-    public int IntValue;
-    public float FloatValue;
-    public bool BoolValue;
-    p
+    [SerializeField] private MessageLogger _gameObjectToSpawn;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instantiate(_gameObjectToSpawn);
     }
 
     // Update is called once per frame
